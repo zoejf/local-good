@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  get 'pages/home'
 
+  get 'products/index'
+
+  get 'products/show'
+
+  get 'businesses/index'
+
+  get 'businesses/show'
+
+	root 'pages#home' 
+
+	resources :users
+	
   resources :pages 
 
 end
