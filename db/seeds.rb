@@ -1,4 +1,3 @@
-
 allBusinesses = Business.create([
   {
     name: "Cole Hardware",

@@ -1,9 +1,12 @@
 class PagesController < ApplicationController
   
   def home
-  	@business = Business.all
-  	render :home
+
   end
 
+  def busAPI
+  	@businesses = Business.all
+  	render :json => @businesses
+  end
   
 end
