@@ -25,7 +25,7 @@ $(function(){
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
   // function to show markers on map
-  var showMarker = function(lng, lat, title, link) {
+  var showMarker = function(lng, lat, title) {
     L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
@@ -33,7 +33,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-      description: 'Business Name',
+      description: title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'circle-stroked'
