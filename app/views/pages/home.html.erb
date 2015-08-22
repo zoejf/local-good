@@ -3,6 +3,19 @@
 
 <div class="container-fluid">
 	
+	<div class="col-md-4" id="business">
+	  <% @business.each do |i| %>
+	  <div class="panel panel-default" id="businesses">
+	    <div class="panel-heading">
+	      <h3 class="panel-title" id="tit"><%= name %></h3>
+	    </div>
+	    <div class="panel-body">
+	    	<%= description %>
+	    </div>
+	  </div><br>
+	  <% end %>
+
+	</div>
 
 
 </div>
