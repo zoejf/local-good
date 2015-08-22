@@ -12,7 +12,6 @@ $(function(){
 
   });
 
-
       // map.dragging.disable();
       map.touchZoom.disable();
       map.doubleClickZoom.disable();
@@ -20,12 +19,10 @@ $(function(){
       // Disable tap handler, if present.
       if (map.tap) map.tap.disable();
 
-
- 
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
   // function to show markers on map
-  var showMarker = function(lng, lat) {
+  var showMarker = function(lng, lat, title) {
     L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
@@ -33,7 +30,7 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-      description: 'Business Name',
+      description: title,
         'marker-size': 'small',
         'marker-color': '#fc4607',
         'marker-symbol': 'circle-stroked'
@@ -60,9 +57,6 @@ $(function(){
   //   });
   // });
   
-
-
-
 });
 
 
