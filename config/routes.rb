@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	
   resources :pages 
 
+  resources :businesses
+
 end
 
 #           Prefix Verb   URI Pattern                 Controller#Action
