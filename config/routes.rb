@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-	root 'pages#home' 
-
+	root 'pages#home'
 	get 'pages/busAPI'
 
+  resources :businesses
 	resources :users
-	
-  resources :pages 
+  resources :pages
 
 end
 
@@ -32,5 +31,3 @@ end
 #                  PATCH  /pages/:id(.:format)        pages#update
 #                  PUT    /pages/:id(.:format)        pages#update
 #                  DELETE /pages/:id(.:format)        pages#destroy
-
-
