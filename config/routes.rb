@@ -1,12 +1,26 @@
 Rails.application.routes.draw do
 
-	root 'pages#home'
+
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
+
+  get "/signup", to: "users#new"
+
+  resources :users
+
+  resources :sessions
+
+  root 'pages#home' 
+
 	get 'pages/busAPI'
+	
+  resources :pages 
+	resources :businesses
 
-  resources :businesses
-	resources :users
-  resources :pages
-
+   
 end
 
 #           Prefix Verb   URI Pattern                 Controller#Action
