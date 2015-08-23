@@ -14,7 +14,7 @@ $(function(){
   L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zaGxiYWtlcjExIiwiYSI6ImE0ZjEzNjY0OGE5NzM0OWFlZTJiMzhjN2EwMjBjYmNiIn0.-X5q9AKOOsIA-OQPrbOPTw';
 												 
   var map = L.mapbox.map('map', 'joshlbaker11.n899ei0m', {
-            center: [37.762, -122.437],
+            center: [37.787, -122.437],
             zoom: 13,
             minZoom: 2,
             zoomControl: false,
