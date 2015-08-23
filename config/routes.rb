@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
@@ -12,16 +13,14 @@ Rails.application.routes.draw do
 
   resources :sessions
 
-  get 'pages/home'
-
-	root 'pages#home' 
+  root 'pages#home' 
 
 	get 'pages/busAPI'
 	
   resources :pages 
+	resources :businesses
 
-
-    
+   
 end
 
 #           Prefix Verb   URI Pattern                 Controller#Action
@@ -46,5 +45,3 @@ end
 #                  PATCH  /pages/:id(.:format)        pages#update
 #                  PUT    /pages/:id(.:format)        pages#update
 #                  DELETE /pages/:id(.:format)        pages#destroy
-
-
