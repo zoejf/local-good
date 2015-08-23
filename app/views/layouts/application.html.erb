@@ -16,8 +16,9 @@
 		  <!-- font awesome css -->
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		  
-		  <%= stylesheet_link_tag    'application' %>
-			
+		  <%= javascript_include_tag "application" %>
+		  
+		  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>		  
 		  <%= csrf_meta_tags %>
 
 		</head>
@@ -59,9 +60,9 @@
 			</div>
 			<!-- bootstrap js -->
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 			<!-- mapbox js -->
 			<script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
-			<%= javascript_include_tag 'application' %>
-		  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>		  
+			
 		</body>
 	</html>

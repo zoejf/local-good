@@ -1,2 +1,2 @@
-Simplify::public_key = 'sbpb_NjhhZWIzZmEtZDZlNS00Yjg2LWE2NzAtNDUyMzRhZDRiMjVh'
-Simplify::private_key = 'U5ZhcIzCxS2Os3HcZoAsA56VwLBDDRUde4I5JpFUaYF5YFFQL0ODSXAOkNtXTToq'
+Simplify::public_key = 'sbpb_MThlMzUyMTktYzY4OC00NDQwLThjZjMtODk0N2FkNTYwNWU1'
+Simplify::private_key = 'AnKeOY0reksc6SLh+Omzqqe8GkEuF2IJ9qwsixyGKLZ5YFFQL0ODSXAOkNtXTToq'
