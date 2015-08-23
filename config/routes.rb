@@ -2,13 +2,22 @@ Rails.application.routes.draw do
 
 	root 'pages#home' 
 
+	# session routes
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
+
+  # user routes
+  get "/signup", to: "users#new"
+
+  # pages routes
 	get 'pages/busAPI'
 
 	resources :users
-	
+	resources :sessions
   resources :pages 
-
-  resources :businesses
+	resources :businesses
 
 end
 
@@ -34,5 +43,3 @@ end
 #                  PATCH  /pages/:id(.:format)        pages#update
 #                  PUT    /pages/:id(.:format)        pages#update
 #                  DELETE /pages/:id(.:format)        pages#destroy
-
-

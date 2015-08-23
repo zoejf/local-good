@@ -1,13 +1,13 @@
 class BusinessesController < ApplicationController
   
   def index
-  	@business = Business.all
+  	@businesses = Business.all
   	render :index
   end
 
   def show
-  	@bus = Business.find(params[:id])
-  	render :show
+    @business = Business.find(params[:id])
+    render :show
   end
 
 end
