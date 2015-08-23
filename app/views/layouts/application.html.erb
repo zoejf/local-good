@@ -17,11 +17,13 @@
 		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		  
 		  <%= stylesheet_link_tag    'application' %>
+		  <script id="sdk-js" src="https://cdn.digits.com/1/sdk.js" async></script>
 			
 		  <%= csrf_meta_tags %>
 
 		</head>
 		<body>
+		<div class="navbar">
 			<nav class="navbar navbar-fixed-top">
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,6 +36,7 @@
 			      </button>
 			      <a class="navbar-brand" href="#">LocalGood</a>
 			    </div>
+
 
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,16 +55,15 @@
 			    </div><!-- /.navbar-collapse -->
 			  </div><!-- /.container-fluid -->
 			</nav>
-
+		</div>
 
 			<%= yield %>
-
-			</div>
+			<%= javascript_include_tag 'application' %>
 			<!-- bootstrap js -->
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 			<!-- mapbox js -->
 			<script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
-			<%= javascript_include_tag 'application' %>
+			
 		  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>		  
 		</body>
 	</html>
