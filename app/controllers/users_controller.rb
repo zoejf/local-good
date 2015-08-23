@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :authorize, only: [:show]
+
+  # before_filter :authorize, only: [:show]
 	
   def new
     if current_user

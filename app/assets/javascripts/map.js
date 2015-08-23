@@ -12,7 +12,6 @@ $(function(){
 
   });
 
-
       // map.dragging.disable();
       map.touchZoom.disable();
       map.doubleClickZoom.disable();
@@ -20,12 +19,10 @@ $(function(){
       // Disable tap handler, if present.
       if (map.tap) map.tap.disable();
 
-
- 
   //set variables
   var geocoder = L.mapbox.geocoder('mapbox.places-v1');
   // function to show markers on map
-  var showMarker = function(lng, lat, title) {
+  var showMarker = function(lng, lat, name, phone) {
     L.mapbox.featureLayer({
       type: 'Feature',
       geometry: {
@@ -33,36 +30,24 @@ $(function(){
         coordinates: [lng, lat]
       },
       properties: {
-      description: title,
-        'marker-size': 'small',
-        'marker-color': '#fc4607',
+      description: "<strong>" + name + "</strong>" + "<br>" + phone,
+        'marker-size': 'medium',
+        'marker-color': '#0967A9',
         'marker-symbol': 'circle-stroked'
-
       }
     }).addTo(map);
   };
 
-  // $.get("/results.json",function(data){
-  //   data.forEach(function(article){
-  //     var location = article.geo_facet[0]
-  //     var title = article.title
-  //     var link = article.url
-
-  //     console.log(link);
-
-  //     if(location !== undefined && title !== undefined){
-  //       geocoder.query(article.geo_facet[0], function(err, geo) {          
-  //         if (!err) {
-  //           showMarker(geo.latlng[1], geo.latlng[0], title, link);
-  //         }
-  //       });
-  //     }
-  //   });
-  // });
-  
-
-
-
+  $.get("/pages/busAPI",function(data){
+    console.log(data);
+    data.forEach(function(businesses){
+      var lat = parseFloat(businesses.lat);
+      var lng = parseFloat(businesses.lng);
+      var name = businesses.name;
+      var phone = businesses.phone;      
+      showMarker(lng, lat, name, phone);
+    });
+  });  
 });
 
 
