@@ -1,2 +1,13 @@
-<h1>Businesses#index</h1>
-<p>Find me in app/views/businesses/index.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 panel">
+    <div class="panel-body">
+    <% @business.each do |i| %>
+    <h1><%= i.name %></h1>
+    <hr>
+    <p><%= i.description %></p><br>
+    <p><%= i.phone %></p>
+    <% end %>
+  </div>
+  </div>
+</div>
+
