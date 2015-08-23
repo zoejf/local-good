@@ -2,6 +2,7 @@
 </div>
 
 <div class="container-fluid">
+
 	<!--     categories dropdown menu -->
   <div class="row">
     <div class="col-xs-12">
@@ -16,6 +17,20 @@
           <li><a href="#">Healthcare</a></li>
         </ul>
       </div>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" id="business">
+      <% @businesses.each do |i| %>
+      <div class="panel panel-default" id="businesses">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="tit"><%= i.name %></h3>
+        </div>
+        <div class="panel-body">
+          <%= i.description %>
+        </div>
+      </div><br>
+      <% end %>
     </div>
   </div>
 
