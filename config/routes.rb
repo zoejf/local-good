@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
-	root 'pages#home' 
+  get 'payment/index'
+
+  post 'payment/pay'
+
+	root 'pages#home'
+
+  
+
 
 	# session routes
   get '/login', to: 'sessions#new'
